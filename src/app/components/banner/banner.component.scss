@@ -1,0 +1,41 @@
+.ip-banner {
+  position: relative;
+  background-image: url('../../../assets/images/banner/bg-prueba.jpg');
+  background-position: 100% 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  @media screen and (max-width: 432px) {
+    background-position: 95% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  &__ctn {
+    width: 50%;
+    h1, p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+
+    @media screen and (max-width: 432px) {
+      width: 100%;
+      left: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  img {
+    object-position: bottom;
+  }
+}

@@ -1,0 +1,42 @@
+$theme-colors: (
+  "primary": $c-primary,
+  "secondary": $c-secondary
+);
+
+$font-family-base: 'Noto Serif Tibetan', sans-serif;
+$btn-font-family: 'Sans Serif';
+$btn-padding-y: 0.5rem;
+$btn-border-width: 2px;
+
+h1, h2, h3, h4, p, span {
+  color: $c-secondary;
+}
+
+.fm-style {
+  font-family: "Style Script", cursive;
+}
+
+.fm-kromo {
+  font-family: $font-family-base;
+  letter-spacing: 1.5;
+}
+
+.cardo-regular {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardo-bold {
+  font-family: "Cardo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cardo-regular-italic {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap.scss";

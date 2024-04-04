@@ -1,0 +1,16 @@
+@import "../../../assets/scss/variables.scss";
+
+.ip-planning {
+  &__ttl {
+    
+    &:first-child {
+      color: $c-primary;
+      font-size: 32px;
+      position: relative;
+      top: 1rem;
+    }
+
+    font-size: 46px;
+    font-weight: 500;
+  }
+}

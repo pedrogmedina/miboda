@@ -1,0 +1,23 @@
+<header class="ip-header">
+    <div class="container d-flex flex-wrap justify-content-between py-3">
+      <a routerLink="" class="d-flex align-items-center me-md-auto text-dark text-decoration-none" href="">
+        <img src="./assets/images/isabelpedro.svg" alt="logo-isapedro" width="146px">
+      </a>
+      <div class="ip-header__nav" *ngIf="!menuMobile">
+        <ul class="nav nav-pills">
+          <li (click)="NavigateTo('')"  class="nav-item">
+            <a class="nav-link text-secondary">Inicio
+            </a>
+          </li>
+          <li (click)="NavigateTo('/contacto/formulario')" class="nav-item">
+            <a class="nav-link text-secondary">
+              Confirmar asistencia
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button class="ip-header__menu e-btn p-2" *ngIf="mobileDevice" (click)="ToggleMenuMobile()">
+        <i class="lnr lnr-menu fs-3"></i>
+      </button>
+    </div>
+</header>

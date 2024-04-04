@@ -1,0 +1,22 @@
+.e-btn {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-family: 'Sans Serif';
+  font-size: 14px;
+  color: $c-primary;
+  border: 2px solid $c-primary;
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 500;
+  transition: all 0.1s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  width: fit-content;
+
+  &:hover {
+    scale: 1.02;
+    opacity: 0.9;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="ip-confirm">
+  <form class="ip-confirm__form" [formGroup]="formulario" (ngSubmit)="enviarCorreo()">
+    <input type="text" formControlName="nombre" placeholder="Nombre">
+    <input type="email" formControlName="correo" placeholder="Correo electrónico">
+    <textarea formControlName="mensaje" placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p>{{ formulario }}</p>
+</div>

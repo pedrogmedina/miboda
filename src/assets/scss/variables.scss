@@ -1,0 +1,10 @@
+
+
+$colors: (
+  "primary": #c1a362,
+  "secondary": #403f3f,
+);
+
+$c-primary: map-get($colors, "primary" );
+$c-secondary: map-get($colors, "secondary" );
+
