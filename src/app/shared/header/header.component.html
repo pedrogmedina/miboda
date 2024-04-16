@@ -4,14 +4,23 @@
         <img src="./assets/images/isabelpedro.svg" alt="logo-isapedro" width="146px">
       </a>
       <div class="ip-header__nav" *ngIf="!menuMobile">
+        <div class="ip-header__close " (click)="ToggleMenuMobile()">
+          <i class="lnr lnr-cross-circle text-primary"></i>
+        </div>
         <ul class="nav nav-pills">
           <li (click)="NavigateTo('')"  class="nav-item">
-            <a class="nav-link text-secondary">Inicio
+            <a class="nav-link  py-0 text-secondary">Inicio
             </a>
           </li>
           <li (click)="NavigateTo('/contacto/formulario')" class="nav-item">
-            <a class="nav-link text-secondary">
+            <a class="nav-link py-0 text-secondary">
               Confirmar asistencia
+            </a>
+          </li>
+          <li class="ms-3">
+            <a routerLink="/" class="e-btn--tertiary py-2 px-3">
+              <i class="lnr lnr-bookmark me-2 fs-6"></i>
+              Guardar la fecha
             </a>
           </li>
         </ul>

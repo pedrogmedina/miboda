@@ -11,6 +11,7 @@ import { ContactService } from 'src/app/services/contact.service';
 export class FormComponent implements OnInit {
   invitadoForm: any = [];
   formstep: string = '1 - Invitados';
+  formstepdescripcion: string = 'Rellena los datos de los invitados y acompanante.';
   public hasHijos! : boolean;
   personalesData: any;
   personalesbloque: boolean = true;
@@ -62,6 +63,7 @@ export class FormComponent implements OnInit {
           this.personalesbloque = false;
           this.direccionbloque = true;
           this.formstep = '2 - Contacto';
+          this.formstepdescripcion = 'En caso de que no podamos daros la invitación en mano, usaremos estos datos para enviarla por correo ordinario.';
         } if (this.invitadoForm.get('personales').invalid) {
           this.mensajeerror = 'Por favor rellene correctamente todos los campos';
         }
@@ -71,11 +73,14 @@ export class FormComponent implements OnInit {
           this.direccionbloque = false;
           this.mensajebloque = true;
           this.formstep = '3 - Confirmar';
+          this.formstepdescripcion = 'Déjanos un mensaje o un saludo si lo deseas';
         }
       break;
       case 'volver':
         this.personalesbloque = true;
         this.direccionbloque = false;
+        this.formstep = '1 - Contacto';
+        this.formstepdescripcion = 'Rellena los datos de los invitados y acompanante.';
       break;
       default:
       break;
