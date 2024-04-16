@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "landing-isapedro",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

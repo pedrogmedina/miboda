@@ -1,11 +1,18 @@
 @import "../../../assets/scss/variables.scss";
 
 .ip-header {
-  background: transparent;
-  position: fixed;
+  background-color: $c-white;
+  position: sticky;
   top: 0;
-  z-index: 10;
   width: 100%;
+  z-index: 1;
+
+  &.fixed-header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
   
   &__nav {
     @media screen and (max-width: 768px) {

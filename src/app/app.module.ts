@@ -8,6 +8,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeModule } from './modules/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactModule } from './modules/contact/contact.module';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { ContactModule } from './modules/contact/contact.module';
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
-    ContactModule
+    ContactModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

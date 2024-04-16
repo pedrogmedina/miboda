@@ -1,6 +1,115 @@
+@use '@angular/material' as mat;
+@include mat.core();
+$bright-navy-blue-palette: (
+  50: #e3f2fd,
+  100: #badffb,
+  200: #8fcbfa,
+  300: #61b7f7,
+  400: #3ca7f6,
+  500: #C29763,
+  600: #C2AF63,
+  700: $c-primary,
+  800: #C28763,
+  900: #C2BB63,
+  A100: #c2e4ff,
+  A200: #addcff,
+  A400: #1f9eff,
+  A700: #00518f,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  )
+);
+$gainsboro-palette: (
+  50: #f9f9fa,
+  100: #f3f3f4,
+  200: #ebebec,
+  300: #dcdcdd,
+  400: #b9b9ba,
+  500: #99999a,
+  600: #707071,
+  700: #5d5d5e,
+  800: #3e3e3f,
+  900: #1d1d1e,
+  A100: #f5f5f5,
+  A200: #eaeaeb,
+  A400: #d6d6d7,
+  A700: #838386,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: white,
+  )
+);
+$crimson-palette: (
+  50: #ffebef,
+  100: #ffcdc5,
+  200: #f0999f,
+  300: #e77179,
+  400: #f24e58,
+  500: #f83a40,
+  600: #e9313e,
+  700: #d72638,
+  800: #ca1e30,
+  900: #bb0d24,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+$isapedro-primary: mat.define-palette($bright-navy-blue-palette, 700, 300, 900);
+$isapedro-accent: mat.define-palette($gainsboro-palette, 300, 100, 500);
+$isapedro-warn: mat.define-palette($crimson-palette, 700);
+$isapedro-theme: mat.define-light-theme((
+  color: (
+    primary: $isapedro-primary,
+    accent: $isapedro-accent,
+    warn: $isapedro-warn,
+  )
+));
+@include mat.all-component-themes($isapedro-theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; background-color: #fff; }
+
+// Bootstrap theme specific
+
 $theme-colors: (
   "primary": $c-primary,
-  "secondary": $c-secondary
+  "secondary": $c-secondary,
+  "tertiary": $c-tertiary
 );
 
 $font-family-base: 'Noto Serif Tibetan', sans-serif;
@@ -37,6 +146,21 @@ h1, h2, h3, h4, p, span {
   font-family: "Cardo", serif;
   font-weight: 400;
   font-style: italic;
+}
+
+.c-headline {
+  &__ttl {
+    
+    &:first-child {
+      color: $c-primary;
+      font-size: 32px;
+      position: relative;
+      top: 1rem;
+    }
+
+    font-size: 46px;
+    font-weight: 500;
+  }
 }
 // Bootstrap and its default variables
 @import "node_modules/bootstrap/scss/bootstrap.scss";

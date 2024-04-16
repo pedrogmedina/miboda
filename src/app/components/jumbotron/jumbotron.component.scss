@@ -1,16 +1,13 @@
-.ip-banner {
+.ip-jumbotron {
   position: relative;
-  height: 240px;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center right;
-    filter:opacity(0.3);
-  }
+  background-image: url('../../../assets/images/banner/bg-prueba.jpg');
+  background-position: 100% 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 
   @media screen and (max-width: 432px) {
     background-position: 95% 100%;
@@ -36,5 +33,9 @@
       margin: 0;
       padding: 0;
     }
+  }
+
+  img {
+    object-position: bottom;
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ContactService } from 'src/app/services/contact.service';
 
@@ -9,20 +9,81 @@ import { ContactService } from 'src/app/services/contact.service';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  public formulario!: FormGroup;
+  invitadoForm: any = [];
+  formstep: string = '1 - Invitados';
+  public hasHijos! : boolean;
+  personalesData: any;
+  personalesbloque: boolean = true;
+  direccionbloque: boolean = false;
+  mensajebloque: boolean = false;
+  disabled: any;
+  mensajeerror : string = '';
+  mensajeerrorfinal: string = '';
 
-  constructor(private contactService: ContactService, private formBuilder: FormBuilder, private router: Router) { }
+  constructor(
+    private contactService: ContactService, 
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      nombre: ['', Validators.required],
-      correo: ['', Validators.required],
-      mensaje: ['', Validators.required], 
+    this.invitadoForm =  this.formBuilder.group({
+      personales: this.formBuilder.group({
+        nombre:['', [Validators.required]],
+        apellidos:['', [Validators.required]],
+        acompananteNombre:[''],
+        acompananteApellido:[''],
+        correo:['', [Validators.required,  Validators.email]],
+        telefono:['', [Validators.required]],
+      }),
+      direccion: this.formBuilder.group({
+        calle:['', [Validators.required]],
+        poblacion:['', [Validators.required]],
+        provincia:['', [Validators.required]],
+        codPostal:['', [Validators.required]],
+        pais:['España', [Validators.required]],
+      }),
+      mensaje: this.formBuilder.group({
+        mensaje:[''],
+      }),
     });
+
+    this.invitadoForm.valueChanges.subscribe( (res: any) => {
+      this.personalesData = res.personalesData;
+      this.hasHijos = res.hijos;
+    });
+    
   }
 
-  enviarCorreo() {
-    if (this.formulario.valid) {
+  OnClickBloqueForm(bloque : string) {
+    switch(bloque) { 
+      case 'personales':
+        if (this.invitadoForm.get('personales').valid) {
+          this.personalesbloque = false;
+          this.direccionbloque = true;
+          this.formstep = '2 - Contacto';
+        } if (this.invitadoForm.get('personales').invalid) {
+          this.mensajeerror = 'Por favor rellene correctamente todos los campos';
+        }
+      break;
+      case 'direccion':
+        if(this.invitadoForm.get('direccion').valid) { 
+          this.direccionbloque = false;
+          this.mensajebloque = true;
+          this.formstep = '3 - Confirmar';
+        }
+      break;
+      case 'volver':
+        this.personalesbloque = true;
+        this.direccionbloque = false;
+      break;
+      default:
+      break;
+    }
+  }
+
+  /* enviarCorreo() { */
+    /* if (this.formulario.valid) {
       const datosFormulario = this.formulario.value;
       this.contactService.enviarCorreo(datosFormulario.nombre, datosFormulario.correo, datosFormulario.mensaje).subscribe( (res: any) => {
         if (res.status === 200) {
@@ -35,6 +96,18 @@ export class FormComponent implements OnInit {
       }); 
     } else {
       alert('Por favor, complete todos los campos correctamente.');
+    } */
+  /* } */
+
+  public async onSubmitInvitado() {
+    try {
+
+      const response = await this.contactService.createInvitado(this.invitadoForm.value);
+      console.log('Datos enviados correctamente:', response);
+      this.router.navigate(['/formulario/success']);
+    } catch (error) {
+      console.error('Error al enviar los datos:', error);
+      this.mensajeerrorfinal = 'Hubo un error al enviar los datos';
     }
   }
 }

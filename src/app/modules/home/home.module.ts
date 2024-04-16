@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { PlanningComponent } from 'src/app/components/planning/planning.component';
-import { BannerComponent } from 'src/app/components/banner/banner.component';
+import { JumbotronComponent } from 'src/app/components/jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     PlanningComponent,
-    BannerComponent,
+    JumbotronComponent,
   ],
   imports: [
     CommonModule,

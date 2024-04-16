@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +9,15 @@ import { Router, RouterLink } from '@angular/router';
 export class HeaderComponent implements OnInit {
   menuMobile: boolean | undefined;
   mobileDevice: boolean = false;
+  isHomePage: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isHomePage = (event.url === '/');
+      }
+    });
+  }
 
   ngOnInit(): void {
     if(window.screen.width >= 768) {
@@ -20,7 +27,6 @@ export class HeaderComponent implements OnInit {
       this.menuMobile = true;
       this.mobileDevice = true;
     }
-    console.log(window.screen.width, this.menuMobile)
   }
 
   public ToggleMenuMobile() {

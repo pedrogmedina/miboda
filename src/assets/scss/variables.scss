@@ -3,8 +3,19 @@
 $colors: (
   "primary": #c1a362,
   "secondary": #403f3f,
+  "tertiary": #263657,
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+  "dark": #343a40,
+  "white": #fff,
+  "black": #000
 );
 
 $c-primary: map-get($colors, "primary" );
 $c-secondary: map-get($colors, "secondary" );
+$c-tertiary: map-get($colors, "tertiary" );
+$c-white: map-get($colors, "white" );
 
