@@ -32,7 +32,7 @@
         <div formGroupName="personales" *ngIf="personalesbloque">
          
           <div class="row my-3 border py-3 rounded-2">
-            <p class="fw-light fw-medium text-primary">
+            <p class="fw-light fw-medium text-tertiary">
               Primer invitado
             </p>
             <div class="col">
@@ -49,7 +49,7 @@
                 <mat-error>Debes añadir al menos un apellido</mat-error>
               </mat-form-field>
             </div>
-            <p class="fw-light fw-medium text-primary">
+            <p class="fw-light fw-medium text-tertiary">
               Segundo invitado o acompanante
             </p>
             <div class="col">
@@ -67,7 +67,7 @@
               </mat-form-field>
             </div>
             
-            <p class="fw-light fw-medium text-primary">
+            <p class="fw-light fw-medium text-tertiary">
               Datos de contacto
               <br>
               <small class="text-secondary">
@@ -92,7 +92,7 @@
               {{mensajeerror}}
             </span>
             <div class="col-12 d-flex justify-content-end pt-3">
-              <p (click)="OnClickBloqueForm('personales')" class="e-btn bg-primary text-white ">
+              <p (click)="OnClickBloqueForm('personales')" class="e-btn bg-white text-tertiary border-tertiary ">
                 Siguiente
                 <i class="lnr lnr-arrow-right ps-2 fs-5"></i>
               </p>
@@ -106,7 +106,7 @@
         </div>
         <div *ngIf="direccionbloque" formGroupName="direccion">
           <div class="row border py-3 rounded-2">
-            <p class="fw-light fw-medium text-primary">
+            <p class="fw-light fw-medium text-tertiary">
               Dirección
             </p>
             <div class="col-12">
@@ -144,11 +144,11 @@
               </mat-form-field>
             </div>
             <div class="col-12 d-flex justify-content-between pt-3">
-              <p (click)="OnClickBloqueForm('volver')" class="e-btn bg-primary text-white ">
+              <p (click)="OnClickBloqueForm('volver')" class="e-btn bg-white text-tertiary border-tertiary ">
                 <i class="lnr lnr-arrow-left pe-2 fs-5"></i>
                 Volver
               </p>
-              <p (click)="OnClickBloqueForm('direccion')" class="e-btn bg-primary text-white ">
+              <p (click)="OnClickBloqueForm('direccion')" class="e-btn bg-white text-tertiary border-tertiary ">
                 Siguiente
                 <i class="lnr lnr-arrow-right ps-2 fs-5"></i>
               </p>
@@ -161,7 +161,7 @@
 
         <div *ngIf="mensajebloque" formGroupName="mensaje">
           <div class="row border py-3 rounded-2">
-            <p class="fw-light fw-medium text-primary">
+            <p class="fw-light fw-medium text-tertiary">
               Dejanos un mensaje.
             </p>
             <div class="col-12">
@@ -174,7 +174,7 @@
               <span>
                 {{mensajeerrorfinal}}
               </span>
-            <button class="e-btn bg-primary text-white m-auto" type="submit" [disabled]="!invitadoForm.valid">
+            <button class="e-btn bg-white text-tertiary border-tertiary m-auto" type="submit" [disabled]="!invitadoForm.valid">
               Confirmar y enviar
             </button>
             </div>

@@ -20,16 +20,17 @@
     opacity: 0.9;
   }
 
+  &--secondary {
+    @extend .e-btn;
+    color: $c-white;
+    border: 2px solid $c-secondary;
+    background-color: $c-secondary;
+  }
+
   &--tertiary {
     @extend .e-btn;
     color: $c-white;
     border: 2px solid $c-tertiary;
     background-color: $c-tertiary;
-    font-weight: 500;
-    transition: all 0.1s cubic-bezier(0.23, 1, 0.320, 1);
-    overflow: hidden;
-    text-decoration: none;
-    display: flex;
-    width: fit-content;
   }
 }

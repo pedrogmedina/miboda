@@ -1,15 +1,18 @@
 
 
 $colors: (
-  "primary": #c1a362,
-  "secondary": #403f3f,
-  "tertiary": #263657,
+  /* ffe2d0
+  fc8942 */
+  "primary": #ffe2d0,
+  "secondary": #fc8942,
+  "tertiary": #8a9781,
   "success": #28a745,
   "info": #17a2b8,
   "warning": #ffc107,
   "danger": #dc3545,
   "light": #f8f9fa,
-  "dark": #343a40,
+  "dark": #3a3937,
+  "grey" : #a0a0a0,
   "white": #fff,
   "black": #000
 );
@@ -17,5 +20,10 @@ $colors: (
 $c-primary: map-get($colors, "primary" );
 $c-secondary: map-get($colors, "secondary" );
 $c-tertiary: map-get($colors, "tertiary" );
+$c-grey: map-get($colors, "grey" );
+$c-dark: map-get($colors, "dark" );
+
 $c-white: map-get($colors, "white" );
+
+$c-site: map-get($colors, "white" );
 

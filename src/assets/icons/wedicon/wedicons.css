@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'wedicon';
+  src:  url('./wedicon.eot?xb4zj1');
+  src:  url('./wedicon.eot?xb4zj1#iefix') format('embedded-opentype'),
+    url('./wedicon.ttf?xb4zj1') format('truetype'),
+    url('./wedicon.woff?xb4zj1') format('woff'),
+    url('./wedicon.svg?xb4zj1#wedicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="wedicon-"], [class*=" wedicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'wedicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wedicon-DOVE:before {
+  content: "\e900";
+}
+.wedicon-DRINKING:before {
+  content: "\e901";
+}
+.wedicon-GIFT_2:before {
+  content: "\e902";
+}
+.wedicon-GROOM-AND-GROOM:before {
+  content: "\e903";
+}
+.wedicon-GROOM:before {
+  content: "\e904";
+}
+.wedicon-JUST-MARRIED:before {
+  content: "\e905";
+}
+.wedicon-LOVE-SIGN:before {
+  content: "\e906";
+}
+.wedicon-MUSIC:before {
+  content: "\e907";
+}
+.wedicon-PHOTOS:before {
+  content: "\e908";
+}
+.wedicon-PROPOSAL:before {
+  content: "\e909";
+}
+.wedicon-RINGS:before {
+  content: "\e90a";
+}
+.wedicon-WEDDING-DOVES:before {
+  content: "\e90b";
+}
+.wedicon-WEDDING-LOCATION:before {
+  content: "\e90c";
+}
+.wedicon-WEDDING-VOWS:before {
+  content: "\e90d";
+}
+.wedicon-BELL:before {
+  content: "\e90e";
+}
+.wedicon-BRIDAL-BOUQUET:before {
+  content: "\e90f";
+}
+.wedicon-BRIDE-AND-BRIDE:before {
+  content: "\e910";
+}
+.wedicon-BRIDE-AND-GROOM:before {
+  content: "\e911";
+}
+.wedicon-BRIDE:before {
+  content: "\e912";
+}
+.wedicon-CAKE:before {
+  content: "\e913";
+}
+.wedicon-CAMERA:before {
+  content: "\e914";
+}
+.wedicon-CHAMPAGNE:before {
+  content: "\e915";
+}
+.wedicon-CHURCH:before {
+  content: "\e916";
+}
+.wedicon-CUTLERY:before {
+  content: "\e917";
+}

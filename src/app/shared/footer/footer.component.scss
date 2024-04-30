@@ -1,7 +1,14 @@
-.logo {
-  width: 320px;
+@import "../../../assets/scss/variables.scss";
 
-  @media screen and (max-width: 420px) {
-    width: 240px;
+.ip-footer {
+
+  background-color: $c-tertiary;
+
+  .logo {
+    width: 320px;
+  
+    @media screen and (max-width: 420px) {
+      width: 240px;
+    }
   }
 }
