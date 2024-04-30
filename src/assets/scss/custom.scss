@@ -8,7 +8,7 @@ $bright-navy-blue-palette: (
   400: #3ca7f6,
   500: #C29763,
   600: #C2AF63,
-  700: $c-primary,
+  700: $c-tertiary,
   800: #C28763,
   900: #C2BB63,
   A100: #c2e4ff,
@@ -102,7 +102,7 @@ $isapedro-theme: mat.define-light-theme((
 
 
 html, body { height: 100%; }
-body { margin: 0; background-color: #fff; }
+body { margin: 0; background-color: $c-site !important; }
 
 // Bootstrap theme specific
 
@@ -118,7 +118,7 @@ $btn-padding-y: 0.5rem;
 $btn-border-width: 2px;
 
 h1, h2, h3, h4, p, span {
-  color: $c-secondary;
+  color: $c-dark;
 }
 
 .fm-style {
@@ -152,7 +152,7 @@ h1, h2, h3, h4, p, span {
   &__ttl {
     
     &:first-child {
-      color: $c-primary;
+      color: $c-secondary;
       font-size: 32px;
       position: relative;
       top: 1rem;

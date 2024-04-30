@@ -19,4 +19,18 @@
     scale: 1.02;
     opacity: 0.9;
   }
+
+  &--secondary {
+    @extend .e-btn;
+    color: $c-white;
+    border: 2px solid $c-secondary;
+    background-color: $c-secondary;
+  }
+
+  &--tertiary {
+    @extend .e-btn;
+    color: $c-white;
+    border: 2px solid $c-tertiary;
+    background-color: $c-tertiary;
+  }
 }
