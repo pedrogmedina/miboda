@@ -162,5 +162,9 @@ h1, h2, h3, h4, p, span {
     font-weight: 500;
   }
 }
+
+.mat-checkbox-layout .mat-checkbox-label {
+  white-space: normal;
+}
 // Bootstrap and its default variables
 @import "node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,0 +1,42 @@
+<app-banner bannerImage="alojamientos.jpg"></app-banner>
+<div class="ip-confirm">
+  <div class="container">
+    <div class="d-flex justify-content-center py-3">
+      <div class="text-center">
+        <h1 class="c-headline__ttl fm-style">
+          Lista de
+        </h1>
+        <p class="c-headline__ttl cardo-bold">
+          ALOJAMIENTOS
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p>
+          Queremos que te sientas libre para encontrar un lugar donde alojarte estos días. 
+          <br>
+          La mayoría de las recomendaciones se encuentran en Alcalá de Henares, cerca del casco antiguo.
+        </p>
+      </div>
+    </div>
+   <div class="row">
+    <div class="col-12 col-sm-6 col-lg-3 col-xl-3" *ngFor="let alojamiento of alojamientosList">
+      <div class="card border-0 shadow-lg my-3">
+        <img class="card-img-top" src="{{ alojamiento.thumb }}" alt="alojamiento-imagen">
+        <div  class="card-body">
+          <h5  class="card-title">
+            {{ alojamiento.nombre }}
+          </h5>
+          <p class="card-text">
+            {{ alojamiento.desc }}
+          </p>
+          <a href="{{ alojamiento.web}}" target="_blank" class="btn btn-primary">Ir a la web</a>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>

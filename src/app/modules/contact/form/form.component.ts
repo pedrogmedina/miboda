@@ -46,12 +46,13 @@ export class FormComponent implements OnInit {
       }),
       mensaje: this.formBuilder.group({
         mensaje:[''],
+        acceptance:['', [Validators.required]],
+        date: [new Date(), [Validators.required]],
       }),
     });
 
     this.invitadoForm.valueChanges.subscribe( (res: any) => {
       this.personalesData = res.personalesData;
-      this.hasHijos = res.hijos;
     });
     
   }
@@ -109,7 +110,7 @@ export class FormComponent implements OnInit {
 
       const response = await this.contactService.createInvitado(this.invitadoForm.value);
       console.log('Datos enviados correctamente:', response);
-      this.router.navigate(['/formulario/success']);
+      this.router.navigate(['/contacto/confirmacion/success']);
     } catch (error) {
       console.error('Error al enviar los datos:', error);
       this.mensajeerrorfinal = 'Hubo un error al enviar los datos';

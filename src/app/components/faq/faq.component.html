@@ -1,0 +1,29 @@
+<div class="ip-faq" id="faq">
+  <div class="container">
+    <div class="d-flex justify-content-start pb-3">
+      <div class="text-start">
+        <h1 class="c-headline__ttl text-white fm-style">
+          No te quedes
+        </h1>
+        <p class="c-headline__ttl text-white cardo-bold">
+          CON DUDAS
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <mat-accordion class="ip-faq__accordion" displayMode="default" multi="false"
+                       [hideToggle]="false">
+            <mat-expansion-panel [hideToggle]="false" *ngFor="let question of questionsList">
+                <mat-expansion-panel-header class="fs-6">
+                    {{question.pregunta}}
+                  </mat-expansion-panel-header>
+                <mat-action-row>
+                  <p class="fm-kromo fs-6" [innerHTML]="question.respuesta"></p>
+                </mat-action-row>
+            </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</div>

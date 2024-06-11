@@ -1,0 +1,65 @@
+<div class="ip-confirm">
+  <div class="container">
+    <div class="d-flex justify-content-center py-3">
+      <div class="text-center">
+        <h1 class="c-headline__ttl fm-style">
+          Envíanos un
+        </h1>
+        <p class="c-headline__ttl cardo-bold">
+          MENSAJE
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmitContactForm()">
+        <div  class="row">
+          <div class="col-12 col-sm-6 col-lg-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Nombre y Apellidos</mat-label>
+              <input type="text" id="nombrecomplet" formControlName="name" matInput required="true">
+              <mat-error>Debes añadir un nombre</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input type="email" id="email" formControlName="email" matInput required="true">
+              <mat-error>Déjanos un correo electrónico</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-12">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Asunto</mat-label>
+              <input type="text" id="Asunto" formControlName="subject" matInput required="true">
+              <mat-error>Debes añadir un asunto</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-12">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Mensaje</mat-label>
+              <textarea id="mensaje" formControlName="message" matInput required="true" cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="5"
+              cdkAutosizeMaxRows="12"></textarea>
+              <mat-error>Te has olvidado del mensaje</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-12">
+            <mat-checkbox class="checkbox" color="primary" formControlName="privacity" required="true">Acepto los términos y condiciones y doy mi consentimiento para el tratamiento de mis datos personales.</mat-checkbox>
+
+          </div>
+          <p *ngIf="errorenvio">
+            {{errorenvio}}
+          </p>
+          <div class="col-12 d-flex justify-content-end">
+            <button class="e-btn bg-primary text-white" type="submit">
+              Enviar mensaje
+              <i class="lnr lnr-arrow-right my-1 ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      
+  </div>
+</div>

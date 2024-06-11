@@ -1,10 +1,31 @@
 
-<footer class="ip-footer mt-5 py-5">
+<footer class="ip-footer mt-5 pt-5 pb-2">
   <div class="container">
     <div class="d-flex align-items-end gap-5 justify-content-center">
       <a class="d-block link-body-emphasis text-decoration-none logo">
         <img src="./assets/images/isapedro-footer.svg" alt="logo-isapedro" width="100%">
       </a>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ul class="nav justify-content-center pt-3 mt-3">
+          <li class="nav-item">
+            <a class="nav-link px-2 text-white" (click)="NavigateTo('aviso-legal')">
+              Aviso legal
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-white" (click)="NavigateTo('aviso-legal#cookies')">
+              Política de privacidad
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2 text-white" (click)="NavigateTo('aviso-legal')">
+              Política de cookies
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>

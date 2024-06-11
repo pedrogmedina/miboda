@@ -1,4 +1,4 @@
-<app-banner></app-banner>
+<app-banner bannerImage="soto.jpg"></app-banner>
 <div class="ip-confirm">
   <div class="container">
     <div class="d-flex justify-content-center py-3">
@@ -169,6 +169,12 @@
                 <mat-label for="mensaje">Mensaje</mat-label>
                 <textarea id="mensaje" formControlName="mensaje" matInput></textarea>
               </mat-form-field>
+            </div> 
+            <div class="col-12">
+              <mat-checkbox class="checkbox" color="primary" formControlName="acceptance" required="true" id="acceptance">*Acepto los términos y condiciones y doy mi consentimiento para el tratamiento de mis datos personales.
+              </mat-checkbox>
+            <mat-error>Debes aceptar los términos y condiciones.</mat-error>
+  
             </div>
             <div class="col-12 d-flex justify-content-end pt-3">
               <span>

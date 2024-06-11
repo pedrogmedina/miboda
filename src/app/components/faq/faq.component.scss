@@ -1,0 +1,21 @@
+@import "../../../assets/scss/variables.scss";
+
+.ip-faq {
+ background-color: rgba($c-tertiary, 0.5) ;
+ background-image: url(../../../assets/images/banner/bg-banner2.jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-attachment: fixed;
+ padding-block: 3rem;
+
+ &__accordion {
+  .mat-expansion-panel-header {
+    font-family: 'Noto Serif Tibetan', sans-serif;
+    height: 70px;
+  }
+  .mat-action-row {
+    justify-content: start;
+  }
+ }
+}

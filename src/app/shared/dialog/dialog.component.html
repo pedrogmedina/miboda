@@ -1,0 +1,11 @@
+
+<h1 matDialogTitle>{{ title }}</h1>
+
+<mat-dialog-content class="mat-typography">
+  {{description}}
+</mat-dialog-content>
+<mat-dialog-actions class="mt-3" align="end">
+  <button class="e-btn text-primary fw-bold" mat-button [mat-dialog-close]="true" cdkFocusInitial>
+    Cerrar
+  </button>
+</mat-dialog-actions>

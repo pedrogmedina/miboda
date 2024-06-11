@@ -1,38 +1,20 @@
 <div class="ip-cards">
   <div class="container">
-    <div class="d-flex m-auto gap-5 justify-content-center">
-      <div class="ip-cards__block block">
-        <i class="block__icon wedicon-WEDDING-DOVES"></i>
-        <div class="block__ctn my-2">
-          <h3>
-            Titulo
-          </h3>
-          <p>
-            This is a wider card with supporting text below as a natural lead-in to additional content.
-          </p>
-        </div>
-      </div>
-      <div class="ip-cards__block block">
-        <i class="block__icon wedicon-WEDDING-DOVES"></i>
-        <div class="block__ctn my-2">
-          <h3>
-            Titulo
-          </h3>
-          <p>
-            This is a wider card with supporting text below as a natural lead-in to additional content.
-          </p>
-        </div>
-      </div>
-      <div class="ip-cards__block block">
-        <i class="block__icon wedicon-WEDDING-DOVES"></i>
-        <div class="block__ctn my-2">
-          <h3>
-            Titulo
-          </h3>
-          <p>
-            This is a wider card with supporting text below as a natural lead-in to additional content.
-          </p>
-        </div>
+    <div class="ip-cards__row row">
+      <div class="col-12 col-xl-4 px-2 my-2" *ngFor="let card of cardsContentList">
+          <div class="ip-cards__block" routerLink="{{ card.path }}">
+            <div class="ip-cards__img">
+              <img src="{{ card.image }}" alt="reserva-hotel-imagen">
+            </div>
+            <div class="ip-cards__ctn">
+              <h3>
+                {{card.title}}
+              </h3>
+              <p>
+                {{card.description}}
+              </p>
+            </div>
+          </div>
       </div>
     </div>
   </div>

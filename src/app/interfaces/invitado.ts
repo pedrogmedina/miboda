@@ -15,7 +15,7 @@ export interface Invitado {
   ]
   acompanante?: boolean;
   acomp_nombre?: string;
-  hijos?: boolean;
-  hijos_num?: number;
   mensaje?: string;
+  acceptance: boolean;
+  date: Date;
 }

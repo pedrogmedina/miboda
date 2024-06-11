@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormComponent } from './form/form.component';
 import { SuccessComponent } from './success/success.component';
+import { ContactComponent } from './contact.component';
 
 const routes: Routes = [
-  { path: 'formulario', component: FormComponent },
-  { path: 'formulario/success', component: SuccessComponent }
+  { path: 'contacto', component: ContactComponent },
+  { path: 'contacto/confirmacion', component: FormComponent },
+  { path: 'contacto/confirmacion/success', component: SuccessComponent }
 ];
 
 @NgModule({
