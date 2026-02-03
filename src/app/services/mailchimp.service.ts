@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MailchimpService {
-  private apiKey = 'df04364c1f8909d7a606f556b21ed6d3-us18';
+  private apiKey = '';
 
   constructor(
     private http: HttpClient ) { }
